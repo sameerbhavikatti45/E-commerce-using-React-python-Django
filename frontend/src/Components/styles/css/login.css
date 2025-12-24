@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #00d5ff;
+  --accent-color: #007bff;
+  --bg-color: #f7f9fc;
+  --text-color: #222;
+  --radius: 0.5rem;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--bg-color);
+  padding: 1rem;
+}
+
+/* Form box */
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 380px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Toggle buttons */
+.form-toggle {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.form-toggle button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: var(--radius);
+  margin: 0 0.25rem;
+}
+
+.form-toggle button.active,
+.form-toggle button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form input:focus {
+  border-color: var(--accent-color);
+}
+
+.form a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background: var(--accent-color);
+}
+
+.form p {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .form h2 {
+    font-size: 1.25rem;
+  }
+
+  .form input,
+  .form button {
+    font-size: 0.95rem;
+  }
+}
